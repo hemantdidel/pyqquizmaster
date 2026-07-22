@@ -1,13 +1,61 @@
 /* =========================================================
-   PYQQuizMaster v4
+   PYQ Quiz Master
+   Main Application
 ========================================================= */
 
-document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("componentsLoaded", init);
 
-async function init() {
+function init() {
 
-    await loadHomeComponents();
+    console.log("PYQ Quiz Master Initialized");
 
-    console.log("PYQQuizMaster Loaded");
+    initializeTheme();
+
+    initializeSearch();
+
+    initializeMobileMenu();
+
+}
+
+/* ==========================
+   Theme
+========================== */
+
+function initializeTheme() {
+
+    if (typeof initTheme === "function") {
+        initTheme();
+    }
+
+}
+
+/* ==========================
+   Search
+========================== */
+
+function initializeSearch() {
+
+    if (typeof initSearch === "function") {
+        initSearch();
+    }
+
+}
+
+/* ==========================
+   Mobile Menu
+========================== */
+
+function initializeMobileMenu() {
+
+    const button = document.getElementById("mobileMenuBtn");
+    const nav = document.querySelector(".desktop-nav");
+
+    if (!button || !nav) return;
+
+    button.addEventListener("click", () => {
+
+        nav.classList.toggle("show");
+
+    });
 
 }
