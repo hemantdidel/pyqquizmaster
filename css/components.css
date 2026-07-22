@@ -579,3 +579,16 @@
     }
 
 }
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.empty-state{
+    text-align:center;
+    padding:40px;
+    color:var(--text-muted);
+    background:#fff;
+    border:1px dashed var(--border);
+    border-radius:16px;
+}
