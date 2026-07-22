@@ -1,1 +1,124 @@
+:root {
 
+  /* ==========================
+     COLORS
+  ========================== */
+
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #dbeafe;
+
+  --secondary: #10b981;
+  --accent: #f59e0b;
+  --danger: #ef4444;
+
+  --white: #ffffff;
+
+  --bg: #f8fafc;
+  --bg-secondary: #eef4ff;
+
+  --text: #0f172a;
+  --text-light: #475569;
+  --text-muted: #64748b;
+
+  --border: #e2e8f0;
+
+  /* ==========================
+     GRADIENTS
+  ========================== */
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    #2563eb,
+    #3b82f6
+  );
+
+  --gradient-hero: linear-gradient(
+    135deg,
+    #f8fbff,
+    #eef5ff
+  );
+
+  /* ==========================
+     TYPOGRAPHY
+  ========================== */
+
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2rem;
+  --fs-2xl: 2.75rem;
+  --fs-3xl: 3.5rem;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  /* ==========================
+     LAYOUT
+  ========================== */
+
+  --container: 1280px;
+
+  --header-height: 72px;
+
+  --section-padding: 90px;
+
+  /* ==========================
+     SPACING
+  ========================== */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ==========================
+     BORDER RADIUS
+  ========================== */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* ==========================
+     SHADOWS
+  ========================== */
+
+  --shadow-sm: 0 2px 8px rgba(15,23,42,.06);
+
+  --shadow-md: 0 10px 25px rgba(15,23,42,.08);
+
+  --shadow-lg: 0 20px 45px rgba(15,23,42,.10);
+
+  /* ==========================
+     TRANSITIONS
+  ========================== */
+
+  --transition: .3s ease;
+
+  /* ==========================
+     Z-INDEX
+  ========================== */
+
+  --z-header: 1000;
+  --z-dropdown: 1010;
+  --z-modal: 1050;
+  --z-loader: 9999;
+
+}
