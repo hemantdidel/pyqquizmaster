@@ -1,9 +1,13 @@
-/* ===========================================
-   PYQQuizMaster
-=========================================== */
+document.addEventListener("DOMContentLoaded", init);
 
-document.addEventListener("DOMContentLoaded", async () => {
+async function init(){
 
-    console.log("PYQQuizMaster Started");
+    document.getElementById("site-header").innerHTML =
 
-});
+        UI.header();
+
+    document.getElementById("hero-section").innerHTML =
+
+        UI.hero();
+
+}
