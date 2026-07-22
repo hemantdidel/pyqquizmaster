@@ -1,58 +1,94 @@
-/* =====================================================
-   RESPONSIVE
-===================================================== */
+/* ==========================
+   1200px
+========================== */
+
+@media (max-width:1200px){
+
+    :root{
+        --container:1140px;
+    }
+
+}
+
+/* ==========================
+   992px
+========================== */
 
 @media (max-width:992px){
 
-.desktop-nav{
+    :root{
 
-display:none;
+        --section-padding:80px;
 
-}
+        --fs-3xl:3rem;
+        --fs-2xl:2.4rem;
+        --fs-xl:1.8rem;
 
-.mobile-only{
-
-display:block;
-
-}
-
-.profile-btn span:last-child{
-
-display:none;
+    }
 
 }
 
-}
-@media (max-width:992px){
+/* ==========================
+   768px
+========================== */
 
-.hero-container{
+@media (max-width:768px){
 
-grid-template-columns:1fr;
+    :root{
 
-text-align:center;
+        --section-padding:70px;
 
-}
+        --fs-3xl:2.5rem;
+        --fs-2xl:2rem;
+        --fs-xl:1.6rem;
 
-.hero h1{
+    }
 
-font-size:40px;
+    .container{
 
-}
+        width:min(100% - 24px, var(--container));
 
-.hero-buttons{
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-}
-
-.hero-stats{
-
-justify-content:center;
-
-flex-wrap:wrap;
+    }
 
 }
+
+/* ==========================
+   576px
+========================== */
+
+@media (max-width:576px){
+
+    :root{
+
+        --header-height:64px;
+
+        --section-padding:60px;
+
+        --fs-3xl:2rem;
+        --fs-2xl:1.7rem;
+        --fs-xl:1.4rem;
+        --fs-lg:1.25rem;
+
+    }
+
+}
+
+/* ==========================
+   400px
+========================== */
+
+@media (max-width:400px){
+
+    html{
+
+        font-size:15px;
+
+    }
+
+    .container{
+
+        width:min(100% - 20px, var(--container));
+
+    }
 
 }
