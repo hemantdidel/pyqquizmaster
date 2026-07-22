@@ -1,13 +1,13 @@
+/* =========================================================
+   PYQQuizMaster v4
+========================================================= */
+
 document.addEventListener("DOMContentLoaded", init);
 
-async function init(){
+async function init() {
 
-    document.getElementById("site-header").innerHTML =
+    await loadHomeComponents();
 
-        UI.header();
-
-    document.getElementById("hero-section").innerHTML =
-
-        UI.hero();
+    console.log("PYQQuizMaster Loaded");
 
 }
