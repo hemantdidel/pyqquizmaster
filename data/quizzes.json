@@ -1,0 +1,14 @@
+[
+  {
+    "subject": "Mathematics",
+    "tests": 250
+  },
+  {
+    "subject": "Reasoning",
+    "tests": 320
+  },
+  {
+    "subject": "Computer",
+    "tests": 180
+  }
+]
