@@ -658,3 +658,172 @@ section{
     margin:0;
 
 }
+/* ==================================================
+   PART 04 : Hero Background + Animation + Responsive
+================================================== */
+
+/* ---------- Hero Background ---------- */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    background:rgba(37,99,235,.08);
+    top:-120px;
+    right:-120px;
+    filter:blur(20px);
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    background:rgba(59,130,246,.06);
+    left:-100px;
+    bottom:-120px;
+}
+
+/* ---------- Hero Animation ---------- */
+
+.hero-card{
+    animation:floatCard 4s ease-in-out infinite;
+}
+
+.hero-card:nth-child(2){
+    animation-delay:.4s;
+}
+
+.hero-card:nth-child(3){
+    animation-delay:.8s;
+}
+
+.hero-card:nth-child(4){
+    animation-delay:1.2s;
+}
+
+@keyframes floatCard{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* ---------- Hover ---------- */
+
+.hero-card:hover{
+
+    transform:translateY(-14px) scale(1.03);
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:992px){
+
+.hero .container{
+
+flex-direction:column;
+
+}
+
+.hero-content{
+
+max-width:100%;
+
+text-align:center;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.hero-image{
+
+width:100%;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.top-right{
+
+display:none;
+
+}
+
+.search-box{
+
+display:none;
+
+}
+
+.navbar ul{
+
+flex-wrap:wrap;
+
+gap:18px;
+
+padding:15px 0;
+
+}
+
+.hero{
+
+padding:60px 0;
+
+}
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.hero-image{
+
+grid-template-columns:1fr;
+
+}
+
+.logo h2{
+
+font-size:20px;
+
+}
+
+}
