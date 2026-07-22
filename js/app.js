@@ -9,6 +9,8 @@ function init() {
 
     console.log("PYQ Quiz Master Initialized");
 
+    hideLoader();
+
     initializeTheme();
 
     initializeSearch();
@@ -57,5 +59,19 @@ function initializeMobileMenu() {
         nav.classList.toggle("show");
 
     });
+
+}
+
+function hideLoader(){
+
+    const loader=document.getElementById("pageLoader");
+
+    if(!loader) return;
+
+    setTimeout(()=>{
+
+        loader.classList.add("hide");
+
+    },500);
 
 }
