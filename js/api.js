@@ -1,35 +1,38 @@
-/* ===========================================
-   PYQQuizMaster API Module
-   Version : 1.0
-=========================================== */
+/* =========================================================
+   PYQ Quiz Master
+   API / Data Manager
+========================================================= */
 
 const API = {
 
     jobs: "data/jobs.json",
-
     results: "data/results.json",
-
     admitCards: "data/admit-cards.json",
-
     notes: "data/notes.json",
-
-    currentAffairs: "data/current-affairs.json",
-
     quizzes: "data/quizzes.json",
-
-    news: "data/news.json"
+    currentAffairs: "data/current-affairs.json",
+    news: "data/news.json",
+    settings: "data/settings.json"
 
 };
 
-async function getData(file){
+/* ==========================
+   Fetch JSON
+========================== */
+
+async function fetchJSON(url){
 
     try{
 
-        const response = await fetch(file);
+        const response = await fetch(url,{
+            cache:"no-cache"
+        });
 
         if(!response.ok){
 
-            throw new Error(`Unable to load ${file}`);
+            throw new Error(
+                `Failed to load ${url}`
+            );
 
         }
 
@@ -47,44 +50,82 @@ async function getData(file){
 
 }
 
+/* ==========================
+   Jobs
+========================== */
+
 async function getJobs(){
 
-    return await getData(API.jobs);
+    return await fetchJSON(API.jobs);
 
 }
+
+/* ==========================
+   Results
+========================== */
 
 async function getResults(){
 
-    return await getData(API.results);
+    return await fetchJSON(API.results);
 
 }
+
+/* ==========================
+   Admit Cards
+========================== */
 
 async function getAdmitCards(){
 
-    return await getData(API.admitCards);
+    return await fetchJSON(API.admitCards);
 
 }
+
+/* ==========================
+   Notes
+========================== */
 
 async function getNotes(){
 
-    return await getData(API.notes);
+    return await fetchJSON(API.notes);
 
 }
+
+/* ==========================
+   Current Affairs
+========================== */
 
 async function getCurrentAffairs(){
 
-    return await getData(API.currentAffairs);
+    return await fetchJSON(API.currentAffairs);
 
 }
+
+/* ==========================
+   Quizzes
+========================== */
 
 async function getQuizzes(){
 
-    return await getData(API.quizzes);
+    return await fetchJSON(API.quizzes);
 
 }
 
+/* ==========================
+   News
+========================== */
+
 async function getNews(){
 
-    return await getData(API.news);
+    return await fetchJSON(API.news);
+
+}
+
+/* ==========================
+   Settings
+========================== */
+
+async function getSettings(){
+
+    return await fetchJSON(API.settings);
 
 }
