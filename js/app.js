@@ -33,6 +33,48 @@ async function loadJSON(url){
 
 }
 
+function renderJobs(jobs){
+
+    const container = document.getElementById("jobsContainer");
+
+    if(!container) return;
+
+    container.innerHTML = "";
+
+    jobs.forEach(job => {
+
+        container.innerHTML += `
+
+        <article class="job-card">
+
+            <span class="job-tag">${job.status}</span>
+
+            <h3>${job.title}</h3>
+
+            <ul class="job-meta">
+
+                <li>🏢 ${job.department}</li>
+
+                <li>📅 Last Date : ${job.lastDate}</li>
+
+                <li>📍 ${job.location}</li>
+
+            </ul>
+
+            <a href="${job.url}" class="card-btn">
+
+                View Details →
+
+            </a>
+
+        </article>
+
+        `;
+
+    });
+
+}
+
 async function initWebsite(){
 
     const jobs = await loadJSON(API.jobs);
