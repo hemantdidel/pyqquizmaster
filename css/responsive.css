@@ -1,1 +1,25 @@
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
+@media (max-width:992px){
+
+.desktop-nav{
+
+display:none;
+
+}
+
+.mobile-only{
+
+display:block;
+
+}
+
+.profile-btn span:last-child{
+
+display:none;
+
+}
+
+}
