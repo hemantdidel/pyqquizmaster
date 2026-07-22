@@ -1,87 +1,111 @@
-/* ===========================================
-   PYQQuizMaster UI Module
-=========================================== */
+/* =========================================================
+   PYQ Quiz Master
+   UI Renderer
+========================================================= */
 
-const UI = {
+document.addEventListener(
+    "componentsLoaded",
+    initializeUI
+);
 
-    header() {
+async function initializeUI(){
 
-        return `
-        
-<header class="header">
+    await renderLatestJobs();
 
-    <div class="container">
+}
 
-        <div class="logo">
+/* =========================================================
+   Latest Jobs
+========================================================= */
 
-            <a href="index.html">
+async function renderLatestJobs(){
 
-                <h2>PYQQuizMaster</h2>
+    const container =
+        document.getElementById("latestJobsGrid");
+
+    if(!container) return;
+
+    const jobs = await getJobs();
+
+    if(!jobs.length){
+
+        container.innerHTML = `
+            <p class="empty-state">
+                No jobs available.
+            </p>
+        `;
+
+        return;
+
+    }
+
+    container.innerHTML = jobs
+        .slice(0,6)
+        .map(createJobCard)
+        .join("");
+
+}
+
+/* =========================================================
+   Job Card
+========================================================= */
+
+function createJobCard(job){
+
+    return `
+
+    <article class="job-card">
+
+        <h3 class="job-title">
+
+            ${job.title}
+
+        </h3>
+
+        <div class="job-meta">
+
+            <span>
+                🏢 ${job.department}
+            </span>
+
+            <span>
+                📋 ${job.posts} Posts
+            </span>
+
+            <span>
+                🎓 ${job.qualification}
+            </span>
+
+        </div>
+
+        <p>
+
+            <strong>Last Date:</strong>
+
+            ${job.lastDate}
+
+        </p>
+
+        <div class="job-footer">
+
+            <span>
+
+                ${job.status}
+
+            </span>
+
+            <a
+                href="${job.link}"
+                class="apply-btn">
+
+                View Details
 
             </a>
 
         </div>
 
-        <nav>
+    </article>
 
-            <ul>
+    `;
 
-                <li><a href="#">Home</a></li>
-
-                <li><a href="#">Jobs</a></li>
-
-                <li><a href="#">Results</a></li>
-
-                <li><a href="#">Admit Card</a></li>
-
-                <li><a href="#">Notes</a></li>
-
-                <li><a href="#">Quiz</a></li>
-
-            </ul>
-
-        </nav>
-
-    </div>
-
-</header>
-
-        `;
-
-    },
-
-    hero() {
-
-        return `
-
-<section class="hero">
-
-<div class="container">
-
-<h1>India's Smart Exam Preparation Platform</h1>
-
-<p>
-
-Practice PYQs, Mock Tests, Jobs, Results,
-
-Admit Cards, Notes & Current Affairs
-
-all at one place.
-
-</p>
-
-<a href="#" class="btn">
-
-Start Practice
-
-</a>
-
-</div>
-
-</section>
-
-        `;
-
-    }
-
-};
+}
