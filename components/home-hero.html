@@ -2,52 +2,63 @@
 
     <div class="container hero-container">
 
+        <!-- Hero Left -->
+
         <div class="hero-content">
 
             <span class="hero-badge">
-
                 🚀 India's Smart Government Exam Platform
-
             </span>
 
             <h1>
-
-                Crack Your Dream Government Job
-
+                Practice Today,
+                <span>Crack Tomorrow.</span>
             </h1>
 
             <p>
-
-                Previous Year Questions, Mock Tests,
-                Latest Jobs, Results, Admit Cards,
-                Study Notes and Current Affairs —
-                Everything at One Place.
-
+                Previous Year Questions, Mock Tests, Study Notes,
+                Current Affairs, Latest Jobs, Results and Admit Cards —
+                Everything You Need to Prepare for Government Exams.
             </p>
+
+            <!-- Search -->
+
+            <form class="hero-search">
+
+                <input
+                    type="search"
+                    placeholder="Search PYQs, Notes, Jobs..."
+                    aria-label="Search">
+
+                <button type="submit">
+                    Search
+                </button>
+
+            </form>
+
+            <!-- Buttons -->
 
             <div class="hero-buttons">
 
                 <a href="pages/quizzes.html" class="btn btn-primary">
-
                     Start Practice
-
                 </a>
 
-                <a href="pages/jobs.html" class="btn btn-secondary">
-
-                    Latest Jobs
-
+                <a href="pages/notes.html" class="btn btn-secondary">
+                    Study Notes
                 </a>
 
             </div>
+
+            <!-- Stats -->
 
             <div class="hero-stats">
 
                 <div class="stat-card">
 
-                    <h3>10K+</h3>
+                    <h3>20K+</h3>
 
-                    <span>PYQs</span>
+                    <span>Questions</span>
 
                 </div>
 
@@ -55,7 +66,7 @@
 
                     <h3>500+</h3>
 
-                    <span>Mock Tests</span>
+                    <span>Notes</span>
 
                 </div>
 
@@ -71,26 +82,38 @@
 
         </div>
 
-        <div class="hero-visual">
+        <!-- Hero Right -->
 
-            <div class="hero-card">
+        <div class="hero-image">
 
-                <div class="card-icon">📚</div>
+            <img
+                src="assets/images/hero.webp"
+                alt="PYQ Quiz Master Hero Illustration"
+                width="1536"
+                height="1024"
+                loading="eager"
+                fetchpriority="high">
 
-                <h3>Study Smart</h3>
+            <!-- Floating Cards -->
 
-                <p>Practice with real exam level questions.</p>
-
+            <div class="floating-card quiz-card">
+                📝 Quiz
             </div>
 
-            <div class="hero-card">
+            <div class="floating-card jobs-card">
+                💼 Jobs
+            </div>
 
-                <div class="card-icon">🏆</div>
+            <div class="floating-card result-card">
+                🏆 Results
+            </div>
 
-                <h3>Daily Updates</h3>
+            <div class="floating-card admit-card">
+                🎫 Admit Card
+            </div>
 
-                <p>Jobs, Results & Admit Cards in one place.</p>
-
+            <div class="floating-card notes-card">
+                📚 Notes
             </div>
 
         </div>
