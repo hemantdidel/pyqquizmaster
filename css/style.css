@@ -1,7 +1,12 @@
-/* ==============================
-   PYQ Quiz Master
-   Global Styles
-============================== */
+/* ==========================================
+   PYQ Quiz Master v1.0
+   Design System
+========================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Reset */
 
 *{
     margin:0;
@@ -9,6 +14,108 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:'Poppins',sans-serif;
+    background:#F8FAFC;
+    color:#111827;
+    line-height:1.6;
+}
+
+/* Variables */
+
+:root{
+
+    --primary:#2563EB;
+    --primary-dark:#1D4ED8;
+
+    --success:#16A34A;
+    --warning:#F59E0B;
+    --danger:#EF4444;
+
+    --white:#ffffff;
+
+    --background:#F8FAFC;
+
+    --card:#ffffff;
+
+    --border:#E5E7EB;
+
+    --text:#111827;
+
+    --text-light:#6B7280;
+
+    --radius:18px;
+
+    --shadow:
+    0 10px 35px rgba(0,0,0,.08);
+
+    --transition:.3s;
+}
+
+/* Images */
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* Links */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* List */
+
+ul{
+    list-style:none;
+}
+
+/* Buttons */
+
+button{
+    font-family:inherit;
+    cursor:pointer;
+}
+
+/* Container */
+
+.container{
+
+    width:min(1280px,92%);
+    margin:auto;
+
+}
+
+/* Sections */
+
+section{
+
+    padding:70px 0;
+
+}
+
+/* Title */
+
+.section-title{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+.section-subtitle{
+
+    color:var(--text-light);
+
+    margin-bottom:40px;
+
 }
