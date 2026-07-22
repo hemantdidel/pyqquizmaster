@@ -119,3 +119,237 @@ section{
     margin-bottom:40px;
 
 }
+/* ==================================================
+   PART 01 : Top Bar + Header + Logo
+================================================== */
+
+/* ---------- Container Update ---------- */
+
+.container{
+    width:min(1280px,92%);
+    margin:auto;
+}
+
+/* ---------- Top Bar ---------- */
+
+.top-bar{
+
+    background:#2563EB;
+
+    color:#fff;
+
+    font-size:14px;
+
+}
+
+.top-bar .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    min-height:42px;
+
+}
+
+.top-left{
+
+    font-weight:500;
+
+}
+
+.top-right{
+
+    display:flex;
+
+    gap:22px;
+
+}
+
+.top-right a{
+
+    color:#fff;
+
+    transition:.3s;
+
+}
+
+.top-right a:hover{
+
+    opacity:.8;
+
+}
+
+/* ---------- Header ---------- */
+
+.header{
+
+    background:#fff;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.06);
+
+}
+
+.header .container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    min-height:84px;
+
+}
+
+/* ---------- Logo ---------- */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.logo-icon{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:18px;
+
+    background:#2563EB;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:26px;
+
+}
+
+.logo h2{
+
+    font-size:24px;
+
+    color:#111827;
+
+}
+
+.logo small{
+
+    color:#6B7280;
+
+}
+
+/* ---------- Search ---------- */
+
+.search-box{
+
+    display:flex;
+
+    width:420px;
+
+    overflow:hidden;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:14px;
+
+    background:#fff;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:14px;
+
+    font-size:15px;
+
+}
+
+.search-box button{
+
+    width:58px;
+
+    border:none;
+
+    background:#2563EB;
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+/* ---------- Right Buttons ---------- */
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.dark-btn{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#F3F4F6;
+
+    cursor:pointer;
+
+}
+
+.login-btn{
+
+    padding:12px 24px;
+
+    background:#2563EB;
+
+    color:#fff;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:#1D4ED8;
+
+}
