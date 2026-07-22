@@ -9,9 +9,11 @@
 
     <title>PYQQuizMaster - Government Exam Preparation Platform</title>
 
-    <meta name="description" content="Previous Year Questions, Mock Tests, Government Jobs, Results, Admit Cards, Study Notes and Current Affairs.">
+    <meta name="description"
+        content="Previous Year Questions, Government Jobs, Results, Admit Cards, Study Notes and Current Affairs.">
 
-    <meta name="keywords" content="PYQ, Government Jobs, SSC, Railway, RPSC, REET, CET, Previous Year Questions">
+    <meta name="keywords"
+        content="PYQ, SSC, Railway, RPSC, REET, CET, Government Jobs">
 
     <meta name="theme-color" content="#2563EB">
 
@@ -19,10 +21,9 @@
 
     <link rel="manifest" href="manifest.json">
 
+    <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
-
     <link rel="stylesheet" href="css/components.css">
-
     <link rel="stylesheet" href="css/responsive.css">
 
 </head>
@@ -31,44 +32,39 @@
 
 <div id="app">
 
-<header id="site-header"></header>
+    <div id="header"></div>
 
-<nav id="main-navigation"></nav>
+    <main>
 
-<main>
+        <div id="hero"></div>
 
-<section id="hero-section"></section>
+        <div id="home-latest-jobs"></div>
 
-<section id="quick-actions"></section>
+        <div id="home-latest-results"></div>
 
-<section id="latest-jobs"></section>
+        <div id="home-latest-admit-cards"></div>
 
-<section id="latest-results"></section>
+        <div id="home-current-affairs"></div>
 
-<section id="latest-admit-cards"></section>
+        <div id="home-study-notes"></div>
 
-<section id="current-affairs"></section>
+        <div id="home-popular-quizzes"></div>
 
-<section id="study-notes"></section>
+        <div id="home-news"></div>
 
-<section id="popular-quizzes"></section>
+    </main>
 
-<section id="latest-news"></section>
-
-</main>
-
-<footer id="site-footer"></footer>
+    <div id="footer"></div>
 
 </div>
 
+<script src="js/utils.js"></script>
 <script src="js/api.js"></script>
-
 <script src="js/ui.js"></script>
-
+<script src="js/loader.js"></script>
 <script src="js/search.js"></script>
-
 <script src="js/router.js"></script>
-
+<script src="js/theme.js"></script>
 <script src="js/app.js"></script>
 
 </body>
