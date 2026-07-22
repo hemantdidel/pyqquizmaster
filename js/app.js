@@ -90,7 +90,9 @@ async function initWebsite(){
     const quizzes = await loadJSON(API.quizzes);
 
     console.log("Jobs :", jobs);
-
+   
+    renderJobs(jobs);
+   
     console.log("Results :", results);
 
     console.log("Admit Cards :", admitCards);
