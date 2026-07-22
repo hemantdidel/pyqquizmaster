@@ -571,3 +571,90 @@ section{
     color:#fff;
 
 }
+/* ==================================================
+   PART 03 : Hero Cards
+================================================== */
+
+.hero .container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:80px;
+
+}
+
+.hero-image{
+
+    flex:1;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+.hero-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.hero-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card-icon{
+
+    width:70px;
+
+    height:70px;
+
+    background:#DBEAFE;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:30px;
+
+    margin-bottom:18px;
+
+}
+
+.hero-card h3{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+    color:#111827;
+
+}
+
+.hero-card p{
+
+    color:#6B7280;
+
+    margin:0;
+
+}
