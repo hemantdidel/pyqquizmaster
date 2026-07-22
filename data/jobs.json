@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "SSC CGL 2026 Notification",
+    "department": "SSC",
+    "location": "All India",
+    "lastDate": "20 Aug 2026",
+    "status": "NEW",
+    "url": "#"
+  },
+  {
+    "id": 2,
+    "title": "Railway Group D Recruitment",
+    "department": "RRB",
+    "location": "India",
+    "lastDate": "28 Aug 2026",
+    "status": "NEW",
+    "url": "#"
+  },
+  {
+    "id": 3,
+    "title": "Rajasthan Patwari Recruitment",
+    "department": "RSSB",
+    "location": "Rajasthan",
+    "lastDate": "15 Aug 2026",
+    "status": "NEW",
+    "url": "#"
+  }
+]
