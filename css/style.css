@@ -1592,3 +1592,108 @@ grid-template-columns:1fr;
 }
 
 }
+/* ==================================================
+   PART 12 : Popular Quiz Categories
+================================================== */
+
+.popular-quizzes{
+
+    padding:90px 0;
+
+    background:#F8FAFC;
+
+}
+
+.quiz-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.quiz-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    border:1px solid #E5E7EB;
+
+    text-align:center;
+
+    padding:30px;
+
+    transition:.35s;
+
+}
+
+.quiz-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.quiz-icon{
+
+    width:75px;
+
+    height:75px;
+
+    margin:auto;
+
+    margin-bottom:18px;
+
+    border-radius:20px;
+
+    background:#DBEAFE;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:34px;
+
+}
+
+.quiz-card h3{
+
+    margin-bottom:10px;
+
+    color:#111827;
+
+}
+
+.quiz-card span{
+
+    color:#6B7280;
+
+    font-size:15px;
+
+}
+
+@media(max-width:992px){
+
+.quiz-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+.quiz-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
