@@ -1,100 +1,66 @@
-/* =========================================================
-   PYQQuizMaster v4
+/* ==========================================
    Component Loader
-========================================================= */
+========================================== */
 
-async function loadComponent(targetId, filePath) {
+const components = {
+    loading: "components/loading.html",
+    header: "components/header.html",
+    hero: "components/home-hero.html",
+    "home-popular-quizzes": "components/home-popular-quizzes.html",
+    "home-latest-jobs": "components/home-latest-jobs.html",
+    "home-latest-results": "components/home-latest-results.html",
+    "home-latest-admit-cards": "components/home-latest-admit-cards.html",
+    "home-study-notes": "components/home-study-notes.html",
+    "home-current-affairs": "components/home-current-affairs.html",
+    "home-news": "components/home-news.html",
+    footer: "components/footer.html"
+};
 
-    const target = document.getElementById(targetId);
+async function loadComponent(id, file) {
 
-    if (!target) {
+    const element = document.getElementById(id);
 
-        console.error(`Container not found: ${targetId}`);
-
-        return;
-
-    }
+    if (!element) return;
 
     try {
 
-        const response = await fetch(filePath);
+        const response = await fetch(file);
 
         if (!response.ok) {
-
-            throw new Error(`Unable to load ${filePath}`);
-
+            throw new Error(`${file} not found`);
         }
 
-        const html = await response.text();
+        element.innerHTML = await response.text();
 
-        target.innerHTML = html;
-
-    }
-
-    catch (error) {
+    } catch (error) {
 
         console.error(error);
 
-        target.innerHTML = `
-            <div class="component-error">
-                Failed to load component.
-            </div>
-        `;
+        element.innerHTML = "";
 
     }
 
 }
 
-async function loadHomeComponents() {
+async function loadComponents() {
 
-    await loadComponent(
-        "header",
-        "components/header.html"
-    );
+    const tasks = [];
 
-    await loadComponent(
-        "hero",
-        "components/home-hero.html"
-    );
+    for (const [id, file] of Object.entries(components)) {
 
-    await loadComponent(
-        "home-latest-jobs",
-        "components/home-latest-jobs.html"
-    );
+        tasks.push(loadComponent(id, file));
 
-    await loadComponent(
-        "home-latest-results",
-        "components/home-latest-results.html"
-    );
+    }
 
-    await loadComponent(
-        "home-latest-admit-cards",
-        "components/home-latest-admit-cards.html"
-    );
+    await Promise.all(tasks);
 
-    await loadComponent(
-        "home-current-affairs",
-        "components/home-current-affairs.html"
-    );
-
-    await loadComponent(
-        "home-study-notes",
-        "components/home-study-notes.html"
-    );
-
-    await loadComponent(
-        "home-popular-quizzes",
-        "components/home-popular-quizzes.html"
-    );
-
-    await loadComponent(
-        "home-news",
-        "components/home-news.html"
-    );
-
-    await loadComponent(
-        "footer",
-        "components/footer.html"
+    document.dispatchEvent(
+        new CustomEvent("componentsLoaded")
     );
 
 }
+
+document.addEventListener(
+    "DOMContentLoaded",
+    loadComponents
+);
