@@ -1095,3 +1095,122 @@ grid-template-columns:1fr;
 }
 
 }
+/* ==================================================
+   PART 07 : Latest Jobs
+================================================== */
+
+.latest-jobs{
+
+    padding:90px 0;
+
+    background:#ffffff;
+
+}
+
+.jobs-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+.job-card{
+
+    background:#fff;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    transition:.35s;
+
+    position:relative;
+
+}
+
+.job-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.job-tag{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:#16A34A;
+
+    color:#fff;
+
+    padding:6px 12px;
+
+    border-radius:50px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.job-card h3{
+
+    margin-top:25px;
+
+    margin-bottom:18px;
+
+    font-size:22px;
+
+    line-height:1.4;
+
+}
+
+.job-meta{
+
+    margin-bottom:25px;
+
+}
+
+.job-meta li{
+
+    margin-bottom:10px;
+
+    color:#6B7280;
+
+}
+
+.card-btn{
+
+    color:#2563EB;
+
+    font-weight:600;
+
+}
+
+.section-action{
+
+    text-align:center;
+
+    margin-top:45px;
+
+}
+
+@media(max-width:992px){
+
+.jobs-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
