@@ -366,6 +366,14 @@ min-height:720px;
     radial-gradient(circle at bottom right,#E0F2FE 0%,transparent 40%),
     linear-gradient(135deg,#F8FBFF,#FFFFFF);
 
+  background-image:
+
+radial-gradient(circle at 15% 20%,rgba(37,99,235,.08) 0 2px,transparent 2px),
+
+radial-gradient(circle at 85% 70%,rgba(59,130,246,.08) 0 2px,transparent 2px);
+
+background-size:140px 140px;
+
 }
 
 .hero::before{
@@ -575,33 +583,25 @@ min-height:720px;
 
 .hero-buttons{
 
-    display:flex;
+display:flex;
 
-    gap:18px;
+gap:22px;
 
-    margin-bottom:40px;
+margin-bottom:48px;
 
 }
 
 .btn{
 
-    display:inline-flex;
+height:60px;
 
-    align-items:center;
+padding:0 34px;
 
-    justify-content:center;
+font-size:17px;
 
-    height:56px;
+border-radius:18px;
 
-    padding:0 28px;
-
-    border-radius:14px;
-
-    font-size:16px;
-
-    font-weight:700;
-
-    transition:.3s;
+font-weight:700;
 
 }
 
@@ -655,46 +655,49 @@ min-height:720px;
 
 .stat-card{
 
-    min-width:145px;
+flex:1;
 
-    padding:22px;
+min-width:170px;
 
-    border-radius:18px;
+background:#ffffff;
 
-    background:#ffffff;
+padding:24px;
 
-    text-align:center;
+border-radius:22px;
 
-    box-shadow:0 12px 35px rgba(15,23,42,.08);
+box-shadow:0 15px 40px rgba(15,23,42,.08);
 
-    transition:.3s;
+border:1px solid #EEF2F7;
+
+transition:.35s;
 
 }
 
 .stat-card:hover{
 
-    transform:translateY(-6px);
+transform:translateY(-10px);
+
+box-shadow:0 25px 55px rgba(15,23,42,.14);
 
 }
 
 .stat-card h3{
 
-    font-size:28px;
+font-size:42px;
 
-    color:#2563EB;
+color:#2563EB;
 
-    margin-bottom:6px;
+margin-bottom:8px;
 
 }
 
 .stat-card span{
 
-    color:#64748B;
+font-size:17px;
 
-    font-size:15px;
+color:#64748B;
 
 }
-
 /*======================================================
                 HERO RIGHT
 ======================================================*/
@@ -718,6 +721,30 @@ min-height:720px;
     width:100%;
 
     max-width:760px;
+
+}
+
+.hero-image-wrapper::after{
+
+content:"";
+
+position:absolute;
+
+width:520px;
+
+height:520px;
+
+border-radius:50%;
+
+background:rgba(37,99,235,.08);
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+z-index:-1;
 
 }
 
