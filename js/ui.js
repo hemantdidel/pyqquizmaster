@@ -20,6 +20,10 @@ async function initializeUI(){
 
     await renderCurrentAffairs();
 
+    await renderPopularQuizzes();
+
+    await renderStudyNotes();
+
 }
 
 /* =========================================================
@@ -489,3 +493,103 @@ return `
 `;
 
 }
+
+async function renderPopularQuizzes(){
+
+    const container =
+    document.getElementById("popularQuizGrid");
+
+    if(!container) return;
+
+    const quizzes = await getQuizzes();
+
+    container.innerHTML = quizzes
+    .slice(0,8)
+    .map(createQuizCard)
+    .join("");
+
+}
+
+function createQuizCard(item){
+
+return `
+
+<div class="quiz-card">
+
+    <div class="quiz-icon">
+
+        ${item.icon}
+
+    </div>
+
+    <h3>${item.name}</h3>
+
+    <p>${item.description}</p>
+
+    <a href="${item.link}">
+
+        Start Practice →
+
+    </a>
+
+</div>
+
+`;
+
+}
+
+async function renderStudyNotes(){
+
+    const container =
+    document.getElementById("studyNotesGrid");
+
+    if(!container) return;
+
+    const notes = await getNotes();
+
+    container.innerHTML = notes
+    .slice(0,6)
+    .map(createNoteCard)
+    .join("");
+
+}
+
+function createNoteCard(note){
+
+return `
+
+<div class="note-card">
+
+    <span class="note-tag">
+
+        ${note.subject}
+
+    </span>
+
+    <h3>
+
+        ${note.title}
+
+    </h3>
+
+    <p>
+
+        ${note.description}
+
+    </p>
+
+    <a
+        href="${note.link}"
+        class="download-btn">
+
+        Download PDF →
+
+    </a>
+
+</div>
+
+`;
+
+}
+
+
