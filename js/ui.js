@@ -113,3 +113,103 @@ return `
 `;
 
 }
+
+/* =========================================================
+Latest Results
+========================================================= */
+
+async function renderLatestResults(){
+
+    const container =
+        document.getElementById("latestResultsGrid");
+
+    if(!container) return;
+
+    const results = await getResults();
+
+    if(!results.length){
+
+        container.innerHTML = `
+            <p class="empty-state">
+                No results available.
+            </p>
+        `;
+
+        return;
+
+    }
+
+    container.innerHTML = results
+        .slice(0,6)
+        .map(createResultCard)
+        .join("");
+
+}
+
+/* =========================================================
+Result Card
+========================================================= */
+
+function createResultCard(result){
+
+return `
+
+<article class="result-card">
+
+    <span class="result-status">
+
+        🏆 ${result.status}
+
+    </span>
+
+    <h3 class="result-title">
+
+        ${result.title}
+
+    </h3>
+
+    <div class="result-meta">
+
+        <span>
+
+            🏢 ${result.department}
+
+        </span>
+
+        <span>
+
+            📅 ${result.resultDate}
+
+        </span>
+
+        <span>
+
+            👥 ${result.candidates}
+
+        </span>
+
+    </div>
+
+    <div class="result-footer">
+
+        <span class="result-date">
+
+            Published
+
+        </span>
+
+        <a
+            href="${result.link}"
+            class="result-btn">
+
+            Check Result →
+
+        </a>
+
+    </div>
+
+</article>
+
+`;
+
+}
