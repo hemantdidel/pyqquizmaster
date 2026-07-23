@@ -727,15 +727,19 @@ min-height:720px;
 
     position:absolute;
 
-    inset:40px;
+    width:620px;
 
-    background:linear-gradient(135deg,#DBEAFE,#BFDBFE);
+    height:620px;
 
-    border-radius:40px;
+    left:50%;
 
-    filter:blur(40px);
+    top:52%;
 
-    opacity:.65;
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,#DBEAFE 0%,#BFDBFE 55%,transparent 75%);
 
     z-index:0;
 
@@ -757,6 +761,8 @@ min-height:720px;
 
     animation:heroFloat 6s ease-in-out infinite;
 
+  filter:drop-shadow(0 35px 60px rgba(37,99,235,.18));
+
 }
 
 /*======================================================
@@ -767,76 +773,83 @@ min-height:720px;
 
     position:absolute;
 
-    z-index:3;
-
     display:flex;
 
     align-items:center;
 
-    gap:10px;
+    gap:12px;
 
-    padding:12px 18px;
+    min-width:190px;
 
-    background:rgba(255,255,255,.92);
+    padding:18px 22px;
 
-    backdrop-filter:blur(14px);
+    background:rgba(255,255,255,.96);
 
-    border:1px solid rgba(255,255,255,.7);
+    border-radius:22px;
 
-    border-radius:16px;
+    border:1px solid rgba(255,255,255,.85);
 
-    box-shadow:0 18px 45px rgba(15,23,42,.10);
+    box-shadow:0 18px 45px rgba(15,23,42,.12);
 
-    font-size:15px;
+    backdrop-filter:blur(20px);
+
+    font-size:17px;
 
     font-weight:700;
 
     color:#0F172A;
 
-    animation:cardFloat 5s ease-in-out infinite;
+    z-index:5;
+
+    transition:.35s;
+
+}
+
+.floating-card:hover{
+
+    transform:translateY(-8px);
 
 }
 
 .floating-quiz{
 
-    top:8%;
+    top:5%;
 
-    left:-25px;
+    right:2%;
 
 }
 
 .floating-job{
 
-    top:28%;
+    top:32%;
 
-    right:-20px;
+    right:-8%;
 
 }
 
 .floating-result{
 
-    bottom:28%;
+    top:38%;
 
-    left:-35px;
+    left:-6%;
 
 }
 
 .floating-admit{
 
-    bottom:8%;
+    bottom:14%;
 
-    right:0;
+    left:-4%;
 
 }
 
 .floating-notes{
 
-    top:62%;
+    bottom:8%;
 
-    right:-45px;
+    right:-8%;
 
 }
-
 /*======================================================
             ANIMATIONS
 ======================================================*/
