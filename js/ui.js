@@ -12,6 +12,8 @@ async function initializeUI(){
 
     await renderLatestJobs();
 
+    await renderLatestResults();
+
 }
 
 /* =========================================================
