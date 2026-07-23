@@ -18,6 +18,8 @@ async function initializeUI(){
 
     await renderLatestNews();
 
+    await renderCurrentAffairs();
+
 }
 
 /* =========================================================
@@ -407,3 +409,83 @@ return `
 
 }
 
+/* =========================================================
+Current Affairs
+========================================================= */
+
+async function renderCurrentAffairs(){
+
+    const container =
+        document.getElementById("currentAffairsGrid");
+
+    if(!container) return;
+
+    const affairs =
+        await getCurrentAffairs();
+
+    if(!affairs.length){
+
+        container.innerHTML=`
+            <p class="empty-state">
+                No Current Affairs Available.
+            </p>
+        `;
+
+        return;
+
+    }
+
+    container.innerHTML = affairs
+        .slice(0,6)
+        .map(createCurrentAffairCard)
+        .join("");
+
+}
+
+function createCurrentAffairCard(item){
+
+return `
+
+<article class="current-card">
+
+    <span class="current-category">
+
+        ${item.category}
+
+    </span>
+
+    <h3>
+
+        ${item.title}
+
+    </h3>
+
+    <p>
+
+        ${item.description}
+
+    </p>
+
+    <div class="current-footer">
+
+        <span>
+
+            📅 ${item.date}
+
+        </span>
+
+        <a
+            href="${item.link}"
+            class="read-btn">
+
+            Read →
+
+        </a>
+
+    </div>
+
+</article>
+
+`;
+
+}
