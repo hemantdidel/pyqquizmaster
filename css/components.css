@@ -3,58 +3,62 @@
 ===================================================== */
 
 .site-header{
-
     position:sticky;
-
     top:0;
-
+    left:0;
+    width:100%;
+    height:82px;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(226,232,240,.8);
     z-index:1000;
-
-    background:#ffffff;
-
-    border-bottom:1px solid #E5E7EB;
-
+    transition:.35s ease;
 }
 
 .header-container{
-
-    height:74px;
-
+    height:100%;
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
+    gap:40px;
 }
+
+/* =====================================================
+   LOGO
+===================================================== */
 
 .site-logo{
     display:flex;
     align-items:center;
     gap:14px;
-    text-decoration:none;
     flex-shrink:0;
 }
 
 .logo-image{
-    width:52px;
-    height:52px;
+    width:56px;
+    height:56px;
     object-fit:contain;
+    transition:.3s;
+}
+
+.site-logo:hover .logo-image{
+    transform:rotate(-5deg) scale(1.05);
 }
 
 .logo-content{
     display:flex;
     flex-direction:column;
     justify-content:center;
-    line-height:1.1;
 }
 
 .logo-title{
     margin:0;
     font-size:30px;
     font-weight:800;
+    line-height:1;
     color:#111827;
-    letter-spacing:-0.5px;
+    letter-spacing:-.5px;
 }
 
 .logo-title span{
@@ -62,113 +66,116 @@
 }
 
 .logo-tagline{
-    margin-top:4px;
-    margin-bottom:0;
+    margin-top:5px;
     font-size:11px;
-    font-weight:500;
+    font-weight:600;
     color:#64748B;
-    letter-spacing:1px;
+    letter-spacing:1.2px;
     text-transform:uppercase;
 }
 
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.desktop-nav{
+    margin-left:auto;
+}
+
 .desktop-nav ul{
-
     display:flex;
-
+    align-items:center;
+    gap:34px;
     list-style:none;
-
-    gap:28px;
-
 }
 
 .desktop-nav a{
-
-    font-weight:600;
-
+    position:relative;
     color:#374151;
-
+    font-size:15px;
+    font-weight:600;
     transition:.3s;
-
 }
 
-.desktop-nav a:hover,
+.desktop-nav a:hover{
+    color:#2563EB;
+}
+
+.desktop-nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-30px;
+    width:0;
+    height:3px;
+    border-radius:20px;
+    background:#2563EB;
+    transition:.3s;
+}
+
+.desktop-nav a:hover::after,
+.desktop-nav .active::after{
+    width:100%;
+}
 
 .desktop-nav .active{
-
     color:#2563EB;
-
 }
 
+/* =====================================================
+   RIGHT SIDE
+===================================================== */
+
 .header-actions{
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
-
 }
 
 .header-btn{
-
-    width:42px;
-
-    height:42px;
-
-    border:none;
-
-    border-radius:10px;
-
-    background:#F3F4F6;
-
+    width:46px;
+    height:46px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#F8FAFC;
+    border:1px solid #E2E8F0;
+    border-radius:14px;
     cursor:pointer;
-
     font-size:18px;
-
     transition:.3s;
-
 }
 
 .header-btn:hover{
-
     background:#2563EB;
-
-    color:#ffffff;
-
+    color:#fff;
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
 }
 
 .profile-btn{
-
-    height:42px;
-
-    padding:0 16px;
-
-    border:none;
-
-    border-radius:10px;
-
-    background:#2563EB;
-
-    color:#ffffff;
-
+    height:46px;
+    padding:0 22px;
     display:flex;
-
     align-items:center;
-
     gap:8px;
-
-    cursor:pointer;
-
+    background:linear-gradient(135deg,#2563EB,#3B82F6);
+    color:#fff;
+    border:none;
+    border-radius:14px;
     font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
 
+.profile-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 28px rgba(37,99,235,.35);
 }
 
 .mobile-only{
-
     display:none;
-
 }
-
 /* =====================================================
    HERO
 ===================================================== */
