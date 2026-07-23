@@ -52,60 +52,64 @@ async function renderLatestJobs(){
 
 function createJobCard(job){
 
-    return `
+return `
 
-    <article class="job-card">
+<article class="job-card">
 
-        <h3 class="job-title">
+    <span class="job-status">
 
-            ${job.title}
+        🟢 ${job.status}
 
-        </h3>
+    </span>
 
-        <div class="job-meta">
+    <h3 class="job-title">
 
-            <span>
-                🏢 ${job.department}
-            </span>
+        ${job.title}
 
-            <span>
-                📋 ${job.posts} Posts
-            </span>
+    </h3>
 
-            <span>
-                🎓 ${job.qualification}
-            </span>
+    <div class="job-meta">
 
-        </div>
+        <span>
 
-        <p>
+            🏢 ${job.department}
 
-            <strong>Last Date:</strong>
+        </span>
 
-            ${job.lastDate}
+        <span>
 
-        </p>
+            📋 ${job.posts} Posts
 
-        <div class="job-footer">
+        </span>
 
-            <span>
+        <span>
 
-                ${job.status}
+            🎓 ${job.qualification}
 
-            </span>
+        </span>
 
-            <a
-                href="${job.link}"
-                class="apply-btn">
+    </div>
 
-                View Details
+    <div class="job-footer">
 
-            </a>
+        <span class="job-date">
 
-        </div>
+            📅 ${job.lastDate}
 
-    </article>
+        </span>
 
-    `;
+        <a
+            href="${job.link}"
+            class="apply-btn">
+
+            View Details →
+
+        </a>
+
+    </div>
+
+</article>
+
+`;
 
 }
