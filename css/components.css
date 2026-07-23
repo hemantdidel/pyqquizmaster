@@ -29,27 +29,46 @@
 }
 
 .site-logo{
-
     display:flex;
-
     align-items:center;
-
-    gap:12px;
-
-    font-size:24px;
-
-    font-weight:700;
-
-    color:#111827;
-
+    gap:14px;
+    text-decoration:none;
+    flex-shrink:0;
 }
 
 .logo-image{
+    width:52px;
+    height:52px;
+    object-fit:contain;
+}
 
-    width:42px;
+.logo-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    line-height:1.1;
+}
 
-    height:42px;
+.logo-title{
+    margin:0;
+    font-size:30px;
+    font-weight:800;
+    color:#111827;
+    letter-spacing:-0.5px;
+}
 
+.logo-title span{
+    color:#2563EB;
+}
+
+.logo-tagline{
+    margin-top:4px;
+    margin-bottom:0;
+    font-size:11px;
+    font-weight:500;
+    color:#64748B;
+    letter-spacing:1px;
+    text-transform:uppercase;
 }
 
 .desktop-nav ul{
