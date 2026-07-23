@@ -1,14 +1,20 @@
 [
   {
-    "subject": "Mathematics",
-    "tests": 250
+    "icon": "📐",
+    "name": "Mathematics",
+    "description": "250+ Previous Year Questions & Mock Tests",
+    "link": "pages/quizzes/mathematics.html"
   },
   {
-    "subject": "Reasoning",
-    "tests": 320
+    "icon": "🧠",
+    "name": "Reasoning",
+    "description": "320+ Previous Year Questions & Mock Tests",
+    "link": "pages/quizzes/reasoning.html"
   },
   {
-    "subject": "Computer",
-    "tests": 180
+    "icon": "💻",
+    "name": "Computer",
+    "description": "180+ Previous Year Questions & Mock Tests",
+    "link": "pages/quizzes/computer.html"
   }
 ]
