@@ -358,7 +358,8 @@ BOTTOM HEADER
 
     overflow:hidden;
 
-    padding:90px 0 110px;
+    padding:60px 0 40px;
+min-height:720px;
 
     background:
     radial-gradient(circle at top left,#DBEAFE 0%,transparent 35%),
@@ -419,9 +420,9 @@ BOTTOM HEADER
 
     display:grid;
 
-    grid-template-columns:1.05fr .95fr;
+    grid-template-columns:58% 42%
 
-    gap:70px;
+    gap:20px;
 
     align-items:center;
 
@@ -429,7 +430,7 @@ BOTTOM HEADER
 
 .hero-left{
 
-    max-width:640px;
+    max-width:700px;
 
 }
 
@@ -716,7 +717,7 @@ BOTTOM HEADER
 
     width:100%;
 
-    max-width:650px;
+    max-width:760px;
 
 }
 
@@ -741,6 +742,8 @@ BOTTOM HEADER
 }
 
 .hero-main-image{
+
+  transform:scale(1.12);
 
     position:relative;
 
@@ -883,11 +886,10 @@ BOTTOM HEADER
 }
 
 .hero-container{
-
-    grid-template-columns:1fr;
-
-    gap:50px;
-
+display:grid;
+grid-template-columns:58% 42%;
+align-items:center;
+gap:20px;
 }
 
 .hero-left{
