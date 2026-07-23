@@ -16,6 +16,8 @@ async function initializeUI(){
 
     await renderLatestAdmitCards();
 
+    await renderLatestNews();
+
 }
 
 /* =========================================================
@@ -305,6 +307,97 @@ return `
             Download →
 
         </a>
+
+    </div>
+
+</article>
+
+`;
+
+}
+
+/* =========================================================
+Latest News
+========================================================= */
+
+async function renderLatestNews(){
+
+    const container =
+        document.getElementById("latestNewsGrid");
+
+    if(!container) return;
+
+    const news = await getNews();
+
+    if(!news.length){
+
+        container.innerHTML=`
+            <p class="empty-state">
+
+                No News Available.
+
+            </p>
+        `;
+
+        return;
+
+    }
+
+    container.innerHTML = news
+        .slice(0,6)
+        .map(createNewsCard)
+        .join("");
+
+}
+
+function createNewsCard(news){
+
+return `
+
+<article class="news-card">
+
+    <img
+        src="${news.image}"
+        alt="${news.title}"
+        class="news-image">
+
+    <div class="news-content">
+
+        <span class="news-category">
+
+            ${news.category}
+
+        </span>
+
+        <h3 class="news-title">
+
+            ${news.title}
+
+        </h3>
+
+        <p class="news-desc">
+
+            ${news.description}
+
+        </p>
+
+        <div class="news-footer">
+
+            <span>
+
+                📅 ${news.date}
+
+            </span>
+
+            <a
+                href="${news.link}"
+                class="read-btn">
+
+                Read →
+
+            </a>
+
+        </div>
 
     </div>
 
