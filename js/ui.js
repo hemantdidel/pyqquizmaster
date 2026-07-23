@@ -14,6 +14,8 @@ async function initializeUI(){
 
     await renderLatestResults();
 
+    await renderLatestAdmitCards();
+
 }
 
 /* =========================================================
@@ -209,6 +211,77 @@ return `
         </a>
 
     </div>
+
+</article>
+
+`;
+
+}
+
+/* =========================================================
+Latest Admit Cards
+========================================================= */
+
+async function renderLatestAdmitCards(){
+
+    const container =
+        document.getElementById(
+            "latestAdmitCardsGrid"
+        );
+
+    if(!container) return;
+
+    const cards =
+        await getAdmitCards();
+
+    if(!cards.length){
+
+        container.innerHTML =
+        `<p class="empty-state">
+            No Admit Cards Available
+        </p>`;
+
+        return;
+
+    }
+
+    container.innerHTML =
+        cards
+        .slice(0,6)
+        .map(createAdmitCard)
+        .join("");
+
+}
+
+function createAdmitCard(card){
+
+return `
+
+<article class="admit-card">
+
+<h3 class="admit-title">
+
+${card.title}
+
+</h3>
+
+<div class="admit-meta">
+
+<span>🏢 ${card.department}</span>
+
+<span>📅 ${card.examDate}</span>
+
+<span>🎫 ${card.status}</span>
+
+</div>
+
+<a
+href="${card.link}"
+class="admit-btn">
+
+Download →
+
+</a>
 
 </article>
 
