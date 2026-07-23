@@ -15,6 +15,8 @@ let searchData = [];
 
 async function loadSearchData(){
 
+   await loadSearchData();
+
     searchData = [];
 
     const jobs = await getJobs();
@@ -81,8 +83,6 @@ async function loadSearchData(){
 }
 
 function initSearch() {
-   
-   await loadSearchData();
 
     const forms = document.querySelectorAll(
         ".header-search,.hero-search"
