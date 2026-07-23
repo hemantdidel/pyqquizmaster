@@ -225,28 +225,25 @@ Latest Admit Cards
 async function renderLatestAdmitCards(){
 
     const container =
-        document.getElementById(
-            "latestAdmitCardsGrid"
-        );
+        document.getElementById("latestAdmitCardsGrid");
 
     if(!container) return;
 
-    const cards =
-        await getAdmitCards();
+    const admitCards = await getAdmitCards();
 
-    if(!cards.length){
+    if(!admitCards.length){
 
-        container.innerHTML =
-        `<p class="empty-state">
-            No Admit Cards Available
-        </p>`;
+        container.innerHTML = `
+            <p class="empty-state">
+                No Admit Cards Available.
+            </p>
+        `;
 
         return;
 
     }
 
-    container.innerHTML =
-        cards
+    container.innerHTML = admitCards
         .slice(0,6)
         .map(createAdmitCard)
         .join("");
@@ -259,32 +256,61 @@ return `
 
 <article class="admit-card">
 
-<h3 class="admit-title">
+    <span class="job-status">
 
-${card.title}
+        🎫 ${card.status}
 
-</h3>
+    </span>
 
-<div class="admit-meta">
+    <h3 class="admit-title">
 
-<span>🏢 ${card.department}</span>
+        ${card.title}
 
-<span>📅 ${card.examDate}</span>
+    </h3>
 
-<span>🎫 ${card.status}</span>
+    <div class="admit-meta">
 
-</div>
+        <span>
 
-<a
-href="${card.link}"
-class="admit-btn">
+            🏛️ ${card.department}
 
-Download →
+        </span>
 
-</a>
+        <span>
+
+            📅 ${card.releaseDate}
+
+        </span>
+
+        <span>
+
+            ⏳ ${card.examDate}
+
+        </span>
+
+    </div>
+
+    <div class="job-footer">
+
+        <span class="job-date">
+
+            Available
+
+        </span>
+
+        <a
+            href="${card.link}"
+            class="apply-btn">
+
+            Download →
+
+        </a>
+
+    </div>
 
 </article>
 
 `;
 
 }
+
