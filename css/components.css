@@ -132,6 +132,76 @@
     gap:12px;
 }
 
+/* =====================================================
+   SEARCH BAR
+===================================================== */
+
+.header-search{
+
+    width:340px;
+    height:48px;
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    padding:0 18px;
+
+    background:#F8FAFC;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:14px;
+
+    transition:.3s;
+
+}
+
+.header-search:hover{
+
+    border-color:#2563EB;
+
+}
+
+.header-search:focus-within{
+
+    border-color:#2563EB;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.10);
+
+}
+
+.search-icon{
+
+    font-size:18px;
+
+    color:#64748B;
+
+}
+
+.header-search input{
+
+    width:100%;
+
+    border:none;
+
+    background:transparent;
+
+    outline:none;
+
+    font-size:15px;
+
+    color:#111827;
+
+}
+
+.header-search input::placeholder{
+
+    color:#94A3B8;
+
+}
+
 .header-btn{
     width:46px;
     height:46px;
