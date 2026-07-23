@@ -127,7 +127,7 @@ p{
 ========================== */
 
 .container{
-    width:min(100% - 32px, var(--container));
+    width:min(92%, var(--container));
     margin-inline:auto;
 }
 
