@@ -1596,6 +1596,92 @@ SECTION HEADER
 
 }
 
+/*======================================================
+LATEST ADMIT CARDS
+======================================================*/
+
+.latest-admit-cards{
+
+    padding:100px 0;
+
+    background:#F8FBFF;
+
+}
+
+.admit-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+.admit-card{
+
+    background:#fff;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:24px;
+
+    padding:26px;
+
+    transition:.35s;
+
+    box-shadow:0 12px 35px rgba(15,23,42,.06);
+
+}
+
+.admit-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 22px 55px rgba(15,23,42,.12);
+
+}
+
+.admit-title{
+
+    font-size:22px;
+
+    margin-bottom:18px;
+
+}
+
+.admit-meta{
+
+    display:grid;
+
+    gap:12px;
+
+    margin-bottom:24px;
+
+}
+
+.admit-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:46px;
+
+    padding:0 20px;
+
+    border-radius:12px;
+
+    background:#2563EB;
+
+    color:#fff;
+
+    font-weight:700;
+
+}
+
 /* =====================================================
    RESPONSIVE
 ===================================================== */
