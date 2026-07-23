@@ -91,60 +91,58 @@
 
         <div class="header-actions">
 
-            <button
-                id="searchBtn"
-                class="header-btn"
-                type="button"
-                aria-label="Search">
+    <!-- Search -->
 
-                🔍
+    <form class="header-search" role="search">
 
-            </button>
+        <span class="search-icon">🔍</span>
 
-            <button
-                id="themeBtn"
-                class="header-btn"
-                type="button"
-                aria-label="Dark Mode">
+        <input
+            type="search"
+            id="globalSearch"
+            placeholder="Search jobs, quizzes, notes..."
+            autocomplete="off">
 
-                🌙
+    </form>
 
-            </button>
+    <!-- Theme -->
 
-            <!-- Future Login -->
+    <button
+        id="themeBtn"
+        class="header-btn"
+        type="button"
+        aria-label="Toggle Theme">
 
-            <button
-                id="profileBtn"
-                class="profile-btn"
-                type="button">
+        🌙
 
-                <span class="profile-icon">
+    </button>
 
-                    👤
+    <!-- Login -->
 
-                </span>
+    <button
+        id="profileBtn"
+        class="profile-btn"
+        type="button">
 
-                <span>
+        👤
 
-                    Login
+        <span>Login</span>
 
-                </span>
+    </button>
 
-            </button>
+    <!-- Mobile -->
 
-            <!-- Mobile -->
+    <button
+        id="mobileMenuBtn"
+        class="header-btn mobile-only"
+        type="button"
+        aria-label="Menu">
 
-            <button
-                id="mobileMenuBtn"
-                class="header-btn mobile-only"
-                type="button"
-                aria-label="Menu">
+        ☰
 
-                ☰
+    </button>
 
-            </button>
-
-        </div>
+</div>
 
     </div>
 
