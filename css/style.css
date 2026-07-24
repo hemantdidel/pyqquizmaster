@@ -123,12 +123,19 @@ p{
 }
 
 /* ==========================
-   CONTAINER
+CONTAINER
 ========================== */
 
 .container{
-    width:min(92%, var(--container));
+
+    width:100%;
+
+    max-width:var(--container);
+
     margin-inline:auto;
+
+    padding-inline:24px;
+
 }
 
 /* ==========================
