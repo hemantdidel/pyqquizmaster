@@ -288,7 +288,7 @@ TOP HEADER
 
 .header-top{
 
-    height:88px;
+    height:74px;
 
 }
 
@@ -324,9 +324,9 @@ LOGO
 
 .logo-image{
 
-    width:58px;
+    width:48px;
 
-    height:58px;
+    height:48px;
 
     object-fit:contain;
 
@@ -352,7 +352,7 @@ LOGO
 
     margin:0;
 
-    font-size:26px;
+    font-size:24px;
     
     white-space:nowrap;
 
@@ -416,7 +416,7 @@ SEARCH
 
     flex:1;
 
-    height:56px;
+    height:48px;
 
     padding:0 24px;
 
@@ -434,9 +434,9 @@ SEARCH
 
 .header-search button{
 
-    width:58px;
+    width:48px;
 
-    height:58px;
+    height:48px;
 
     background:#2563EB;
 
@@ -472,9 +472,9 @@ HEADER ACTIONS
 
     position:relative;
 
-    width:50px;
+    width:44px;
 
-    height:50px;
+    height:44px;
 
     display:flex;
 
@@ -546,9 +546,9 @@ HEADER ACTIONS
 
     gap:10px;
 
-    height:50px;
+    height:44px;
 
-    padding:0 24px;
+    padding:0 18px;
 
     border:none;
 
@@ -582,7 +582,7 @@ BOTTOM HEADER
 
 .header-bottom{
 
-    height:64px;
+    height:54px;
 
     border-top:1px solid #EEF2F7;
 
@@ -606,7 +606,7 @@ BOTTOM HEADER
 
     justify-content:center;
 
-    gap:30px;
+    gap:28px;
 
 }
 
@@ -768,7 +768,7 @@ RESPONSIVE
 
 .header-top{
 
-    height:78px;
+    height:74px;
 
 }
 
