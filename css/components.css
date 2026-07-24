@@ -978,6 +978,27 @@ OVERLAY
     visibility:visible;
 
 }
+
+/*=====================================
+MENU BUTTON ANIMATION
+=====================================*/
+
+.menu-btn{
+
+    transition:.3s;
+
+}
+
+.menu-btn.active{
+
+    transform:rotate(90deg);
+
+    background:#2563EB;
+
+    color:#fff;
+
+}
+
 /*======================================================
                     HERO
 ======================================================*/
