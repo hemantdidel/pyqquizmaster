@@ -1,8 +1,8 @@
 <header class="site-header">
 
-    <!-- ===========================
-         TOP HEADER
-    ============================ -->
+    <!-- =========================
+         HEADER TOP
+    ========================== -->
 
     <div class="header-top">
 
@@ -15,20 +15,18 @@
                 <img
                     src="assets/logos/logo.png"
                     alt="PYQ Quiz Master"
-                    class="logo-image">
+                    class="logo-image"
+                    width="58"
+                    height="58">
 
                 <div class="logo-content">
 
-                    <h2 class="logo-title">
-
+                    <h1 class="logo-title">
                         <span>PYQ</span> Quiz Master
-
-                    </h2>
+                    </h1>
 
                     <p class="logo-tagline">
-
                         Previous Year Questions
-
                     </p>
 
                 </div>
@@ -37,13 +35,20 @@
 
             <!-- Search -->
 
-            <form class="header-search">
+            <form
+                class="header-search"
+                id="headerSearchForm"
+                autocomplete="off">
 
                 <input
+                    id="headerSearchInput"
                     type="search"
-                    placeholder="Search for exams, quizzes, notes...">
+                    placeholder="Search Exams, Jobs, Notes..."
+                    aria-label="Search">
 
-                <button type="submit">
+                <button
+                    type="submit"
+                    aria-label="Search">
 
                     🔍
 
@@ -51,55 +56,64 @@
 
             </form>
 
-            <!-- Right -->
+            <!-- Right Side -->
 
             <div class="header-actions">
 
+                <!-- Theme -->
+
                 <button
+                    type="button"
                     class="header-btn"
-                    id="themeBtn">
+                    id="themeBtn"
+                    aria-label="Toggle Theme">
 
                     🌙
 
                 </button>
 
+                <!-- Notification -->
+
                 <button
+                    type="button"
                     class="header-btn"
-                    id="notificationBtn">
+                    id="notificationBtn"
+                    aria-label="Notifications">
 
                     🔔
 
                     <span class="notification-badge">
-
                         8
-
                     </span>
 
                 </button>
 
+                <!-- Login -->
+
                 <button
+                    type="button"
                     class="profile-btn"
                     id="profileBtn">
 
                     👤
 
                     <span>
-
                         Login
-
                     </span>
 
                 </button>
-                
+
+                <!-- Menu -->
+
                 <button
-                   class="header-btn menu-btn"
-                   id="menuToggle"
                     type="button"
+                    class="header-btn menu-btn"
+                    id="menuToggle"
                     aria-label="Open Menu">
 
-                   ☰
+                    ☰
 
-               </button>
+                </button>
 
             </div>
 
@@ -109,15 +123,24 @@
 
 </header>
 
-<div class="side-menu" id="sideMenu">
+<!-- =========================
+     SIDE MENU
+========================= -->
+
+<aside
+    class="side-menu"
+    id="sideMenu">
 
     <div class="side-menu-header">
 
-        <h3>Menu</h3>
+        <h2>
+            Menu
+        </h2>
 
-        <button 
-            id="closeMenu"
+        <button
             type="button"
+            id="closeMenu"
+            class="close-menu-btn"
             aria-label="Close Menu">
 
             ✕
@@ -128,28 +151,51 @@
 
     <nav class="side-nav">
 
-        <a href="index.html">🏠 Home</a>
+        <a href="index.html">
+            🏠 Home
+        </a>
 
-        <a href="pages/quizzes.html">📚 Quizzes</a>
+        <a href="pages/quizzes.html">
+            📚 Quizzes
+        </a>
 
-        <a href="pages/jobs.html">💼 Jobs</a>
+        <a href="pages/jobs.html">
+            💼 Jobs
+        </a>
 
-        <a href="pages/results.html">🏆 Results</a>
+        <a href="pages/results.html">
+            🏆 Results
+        </a>
 
-        <a href="pages/admit-cards.html">🎫 Admit Cards</a>
+        <a href="pages/admit-cards.html">
+            🎫 Admit Cards
+        </a>
 
-        <a href="pages/notes.html">📖 Notes</a>
+        <a href="pages/notes.html">
+            📖 Notes
+        </a>
 
-        <a href="pages/current-affairs.html">📰 Current Affairs</a>
+        <a href="pages/current-affairs.html">
+            📰 Current Affairs
+        </a>
 
-        <a href="pages/news.html">🔥 News</a>
+        <a href="pages/news.html">
+            🔥 News
+        </a>
 
-        <a href="pages/about.html">ℹ About</a>
+        <a href="pages/about.html">
+            ℹ About
+        </a>
 
-        <a href="pages/contact.html">📞 Contact</a>
+        <a href="pages/contact.html">
+            📞 Contact
+        </a>
 
     </nav>
 
-</div>
+</aside>
 
-<div class="menu-overlay" id="menuOverlay"></div>
+<div
+    class="menu-overlay"
+    id="menuOverlay">
+</div>
