@@ -1,6 +1,6 @@
 /* =========================================================
-   PYQ Quiz Master
-   Component Loader
+PYQ Quiz Master
+Component Loader
 ========================================================= */
 
 const components = {
@@ -8,12 +8,13 @@ const components = {
     /* Header */
     header: "components/header.html",
 
-    /* Hero */
-    hero: "components/home-hero.html",
+    /* Breaking News */
+    "home-breaking-news": "components/home-breaking-news.html",
+
+    /* Quick Links */
+    "home-quick-links": "components/home-quick-links.html",
 
     /* Home Sections */
-    "home-popular-quizzes": "components/home-popular-quizzes.html",
-
     "home-latest-jobs": "components/home-latest-jobs.html",
 
     "home-latest-results": "components/home-latest-results.html",
@@ -23,6 +24,8 @@ const components = {
     "home-study-notes": "components/home-study-notes.html",
 
     "home-current-affairs": "components/home-current-affairs.html",
+
+    "home-popular-quizzes": "components/home-popular-quizzes.html",
 
     "home-news": "components/home-news.html",
 
@@ -34,9 +37,8 @@ const components = {
 
 };
 
-
 /* =========================================================
-   Load Single Component
+Load Single Component
 ========================================================= */
 
 async function loadComponent(id, file) {
@@ -61,10 +63,7 @@ async function loadComponent(id, file) {
 
     catch (error) {
 
-        console.error(
-            `Component Load Error (${id})`,
-            error
-        );
+        console.error(`Component Load Error (${id})`, error);
 
         element.innerHTML = "";
 
@@ -72,9 +71,8 @@ async function loadComponent(id, file) {
 
 }
 
-
 /* =========================================================
-   Load All Components
+Load All Components
 ========================================================= */
 
 async function loadComponents() {
@@ -83,9 +81,7 @@ async function loadComponents() {
 
     for (const [id, file] of Object.entries(components)) {
 
-        tasks.push(
-            loadComponent(id, file)
-        );
+        tasks.push(loadComponent(id, file));
 
     }
 
@@ -97,9 +93,8 @@ async function loadComponents() {
 
 }
 
-
 /* =========================================================
-   Start Loading
+Start Loading
 ========================================================= */
 
 document.addEventListener(
