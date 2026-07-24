@@ -86,38 +86,32 @@ function hideLoader() {
    SIDE MENU
 ========================================================= */
 
-function initializeSideMenu(){
+function initializeSideMenu() {
 
     const menuBtn = document.getElementById("menuToggle");
-
     const sideMenu = document.getElementById("sideMenu");
-
     const overlay = document.getElementById("menuOverlay");
-
     const closeBtn = document.getElementById("closeMenu");
 
-    if(
-        !menuBtn ||
-        !sideMenu ||
-        !overlay ||
-        !closeBtn
-    ) return;
+    if (!menuBtn || !sideMenu || !overlay || !closeBtn) return;
 
-    function openMenu(){
+    function openMenu() {
 
         sideMenu.classList.add("active");
-
         overlay.classList.add("active");
+
+        menuBtn.classList.add("active");
 
         document.body.style.overflow = "hidden";
 
     }
 
-    function closeMenu(){
+    function closeMenu() {
 
         sideMenu.classList.remove("active");
-
         overlay.classList.remove("active");
+
+        menuBtn.classList.remove("active");
 
         document.body.style.overflow = "";
 
@@ -129,13 +123,21 @@ function initializeSideMenu(){
 
     overlay.addEventListener("click", closeMenu);
 
-    document.addEventListener("keydown",(e)=>{
+    document.addEventListener("keydown", (e) => {
 
-        if(e.key==="Escape"){
+        if (e.key === "Escape") {
 
             closeMenu();
 
         }
+
+    });
+
+    /* Auto Close After Click */
+
+    document.querySelectorAll(".side-nav a").forEach(link => {
+
+        link.addEventListener("click", closeMenu);
 
     });
 
