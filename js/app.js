@@ -64,17 +64,21 @@ function initializeMobileMenu() {
 
 }
 
-function hideLoader(){
+function hideLoader() {
 
     const loader = document.getElementById("pageLoader");
 
-    if(!loader) return;
+    if (!loader) return;
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
         loader.classList.add("hide");
 
-    },3000);
+        setTimeout(() => {
+            loader.remove();
+        }, 500);
+
+    }, 3000);
 
 }
 
