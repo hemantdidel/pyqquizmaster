@@ -66,7 +66,7 @@ function initializeMobileMenu() {
 
 function hideLoader(){
 
-    const loader=document.getElementById("pageLoader");
+    const loader = document.getElementById("pageLoader");
 
     if(!loader) return;
 
@@ -74,7 +74,7 @@ function hideLoader(){
 
         loader.classList.add("hide");
 
-    },500);
+    },3000);
 
 }
 
