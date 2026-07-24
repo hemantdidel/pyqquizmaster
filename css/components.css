@@ -751,9 +751,9 @@ RESPONSIVE
 
 }
 
-/* ======================================================
-   SIDE MENU
-====================================================== */
+/*======================================================
+SIDE MENU
+======================================================*/
 
 .side-menu{
 
@@ -765,19 +765,23 @@ RESPONSIVE
 
     width:320px;
 
+    max-width:90%;
+
     height:100vh;
 
     background:#ffffff;
 
-    z-index:2000;
+    z-index:5000;
 
-    transition:.35s;
+    box-shadow:-8px 0 35px rgba(0,0,0,.15);
 
-    box-shadow:-10px 0 35px rgba(15,23,42,.12);
+    transition:right .35s ease;
 
     display:flex;
 
     flex-direction:column;
+
+    overflow:hidden;
 
 }
 
@@ -787,83 +791,137 @@ RESPONSIVE
 
 }
 
-.menu-overlay{
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(15,23,42,.45);
-
-    opacity:0;
-
-    visibility:hidden;
-
-    transition:.35s;
-
-    z-index:1999;
-
-}
-
-.menu-overlay.active{
-
-    opacity:1;
-
-    visibility:visible;
-
-}
+/*==========================
+HEADER
+==========================*/
 
 .side-menu-header{
 
-    display:flex;
+    height:72px;
 
-    justify-content:space-between;
+    flex-shrink:0;
+
+    display:flex;
 
     align-items:center;
 
-    padding:24px;
+    justify-content:space-between;
 
-    border-bottom:1px solid #EEF2F7;
+    padding:0 22px;
 
-}
+    border-bottom:1px solid #E5E7EB;
 
-.side-menu-header h3{
-
-    font-size:24px;
+    background:#ffffff;
 
 }
 
-.side-menu-header button{
+.side-menu-header h2{
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+/*==========================
+CLOSE BUTTON
+==========================*/
+
+.close-menu-btn{
 
     width:42px;
 
     height:42px;
 
+    border:none;
+
     border-radius:12px;
 
-    background:#F8FAFC;
+    background:#F3F4F6;
 
     font-size:22px;
 
+    cursor:pointer;
+
+    transition:.3s;
+
 }
+
+.close-menu-btn:hover{
+
+    background:#2563EB;
+
+    color:#ffffff;
+
+}
+
+/*==========================
+NAVIGATION
+==========================*/
 
 .side-nav{
 
-    display:flex;
+    flex:1;
 
-    flex-direction:column;
+    overflow-y:auto;
 
-    padding:18px;
+    padding:16px;
 
 }
 
+/* Scrollbar */
+
+.side-nav::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.side-nav::-webkit-scrollbar-thumb{
+
+    background:#CBD5E1;
+
+    border-radius:999px;
+
+}
+
+.side-nav::-webkit-scrollbar-thumb:hover{
+
+    background:#94A3B8;
+
+}
+
+.side-nav::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+/*==========================
+LINKS
+==========================*/
+
 .side-nav a{
 
-    padding:16px 18px;
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    height:54px;
+
+    padding:0 16px;
+
+    margin-bottom:8px;
 
     border-radius:14px;
 
     color:#334155;
+
+    font-size:17px;
 
     font-weight:600;
 
@@ -881,6 +939,45 @@ RESPONSIVE
 
 }
 
+.side-nav a.active{
+
+    background:#2563EB;
+
+    color:#ffffff;
+
+}
+
+/*======================================================
+OVERLAY
+======================================================*/
+
+.menu-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(15,23,42,.45);
+
+    backdrop-filter:blur(3px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:4999;
+
+}
+
+.menu-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
 /*======================================================
                     HERO
 ======================================================*/
