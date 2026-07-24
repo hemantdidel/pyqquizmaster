@@ -5,9 +5,6 @@
 
 const components = {
 
-    /* Loading */
-    loading: "components/loading.html",
-
     /* Header */
     header: "components/header.html",
 
