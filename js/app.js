@@ -19,6 +19,8 @@ function init() {
 
     initializeSideMenu();
 
+    initializeActiveMenu();
+
 }
 
 /* ==========================
@@ -138,6 +140,34 @@ function initializeSideMenu() {
     document.querySelectorAll(".side-nav a").forEach(link => {
 
         link.addEventListener("click", closeMenu);
+
+    });
+
+}
+
+/* =========================================================
+ACTIVE MENU
+========================================================= */
+
+function initializeActiveMenu() {
+
+    const currentPage =
+        window.location.pathname.split("/").pop() || "index.html";
+
+    document.querySelectorAll(".side-nav a").forEach(link => {
+
+        const href = link.getAttribute("href");
+
+        if (!href) return;
+
+        if (
+            href === currentPage ||
+            href.endsWith(currentPage)
+        ) {
+
+            link.classList.add("active");
+
+        }
 
     });
 
